@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>MuilFurniture</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h2 class="navbar-logo">MuilFurniture</h2>  
+      <ul class="navbar-nav desktop" id="navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Trolley</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+          <div class="profile-button" id="profile-button">
+            Profile
+          </div>
+        </li>
+      </ul>
+      <div class="navbar-nav mobile" id="mobile-nav-button">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="clear"></div>
+    </nav>
+
+    <div class="hero">
+      <div class="slider">
+        <div class="dot active" onclick="showSelectedSlide(1)"></div>
+        <div class="dot" onclick="showSelectedSlide(2)"></div>
+        <div class="dot" onclick="showSelectedSlide(3)"></div>
+        <div class="dot" onclick="showSelectedSlide(4)"></div>
+        <div class="dot" onclick="showSelectedSlide(5)"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="prologue" hidden>
+      <div class="text">
+        <h2>Why you must trust us</h2>
+        <p>We have been commited to satisfy all of our customer since year 1989. And all of our customer never lose hope</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="furniture-list" id="furniture-list"> 
+        <!-- do looping from JSON data -->
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal">
+    <aside class="profile-modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Profile</h3>
+        <div class="close-btn" id="close-btn">
+          <i class="fa-solid fa-x"></i>
+        </div>
+      </div>
+      <div class="content">
+        <div class="user-image">
+          <img src="assets/images/foto-profil.jpg" alt="user">
+        </div>
+        <div class="user-bio">
+          <h3>Muil Djamil</h3>
+          <p>muildjamil@gmail.com</p>
+          <span class="user-location">
+            <i class="fa-solid fa-earth-asia"></i>
+            <p>Indonesia, South Sulawesi</p>
+          </span>
+          <div class="social-link">
+            <p>Get in touch :</p>
+            <button class="linkedin-btn" onclick="goToLink('https://www.linkedin.com/in/muil-djamil/')">
+              <i class="fa-brands fa-linkedin fa-lg"></i>
+              <p>Linkedin</p>
+            </button>
+            <button class="instagram-btn" onclick="goToLink('https://www.instagram.com/muildjamil/')">
+              <i class="fa-brands fa-instagram fa-lg"></i>
+              <p>Instagram</p>
+            </button>
+            <button class="github-btn" onclick="goToLink('https://github.com/MuilMalik10')">
+              <i class="fa-brands fa-github fa-lg"></i>
+              <p>Github</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <p>Copyright &#169; Muil Djamil</p>
+  </footer>
+
+  <script src="index.js" type="module">
+  </script>
+</body>
+</html>
